@@ -1,0 +1,31 @@
+<div class="container mx-auto bg-light px-4">
+  <nav class="nav gap-2 d-flex pt-3">
+    <h1>🐶</h1>
+    <h1 class="fw-bold text-gradient">Bank.com</h1>
+  </nav>
+
+  <div class="mt-4 pb-5">
+    <h3>All account in our system</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Account ID</th>
+          <th>Name</th>
+          <th>Surname</th>
+          <th>Remain</th>
+        </tr>
+      </thead>
+
+      <tbody>  
+        <tr *ngFor="let acc of bankaccs; index as i">
+          <td>{{ i + 1 }}</td>
+          <td>{{ acc.accountId }}</td>
+          <td>{{ acc.accountName }}</td>
+          <td>{{ acc.accountSurname }}</td>
+          <td>{{ acc.moneyAmount | number: '1.2-2' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
